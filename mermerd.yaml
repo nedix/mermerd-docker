@@ -1,0 +1,28 @@
+# show debug logs
+debug: false
+
+# enclose output with mermaid backticks (needed for e.g. in markdown viewer)
+encloseWithMermaidBackticks: true
+
+# omit the attribute keys (PK, FK)
+omitAttributeKeys: true
+
+# omit the constraint labels
+omitConstraintLabels: true
+
+# output file name (default "result.mmd")
+outputFileName: "result.mmd"
+
+# schema that should be used
+schema:
+  - your_schema
+
+# tables to include
+selectedTables:
+  - your_table
+
+# show all constraints, even though the table of the resulting constraint was not selected
+showAllConstraints: true
+
+# show enum values in description column
+showEnumValues: true
