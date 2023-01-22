@@ -24,6 +24,6 @@ touch result.mmd
 docker run --rm -it --net host \
     -v ${CURDIR}/mermerd.yaml:/root/.mermerd:ro \
     --mount type=bind,source="${PWD}"/result.mmd,target=/root/result.mmd \
-    mermerd \
+    ghcr.io/nedix/mermerd-docker \
     --connectionString "mysql://root:@tcp(host.docker.internal:3306)/mysql"
 ```
