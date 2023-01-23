@@ -4,6 +4,8 @@
 
 **Create mermerd config**
 
+Example: [mermerd.yaml](mermerd.yaml)
+
 ```shell
 touch mermerd.yaml
 ```
@@ -18,7 +20,7 @@ touch result.mmd
 
 ```shell
 docker run --rm -it --net host --name mermerd \
-    -v ${CURDIR}/mermerd.yaml:/root/.mermerd:ro \
+    --mount type=bind,source="${PWD}"/mermerd.yaml,target=/root/mermerd.yaml \
     --mount type=bind,source="${PWD}"/result.mmd,target=/root/result.mmd \
     ghcr.io/nedix/mermerd-docker \
     --connectionString "mysql://root:@tcp(host.docker.internal:3306)/mysql"
