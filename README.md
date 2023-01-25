@@ -1,5 +1,10 @@
 # mermerd-docker
 
+This Docker image is used to run the [mermerd](https://github.com/KarnerTh/mermerd) command-line tool, which can
+transform database schemas into Mermaid diagrams. The image expects the user to mount their own mermerd configuration
+file and a file to write the output Mermaid diagram to. When run, the container expects the user to provide a connection
+string to connect to a database.
+
 ## Usage
 
 **Create mermerd config**
