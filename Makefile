@@ -2,7 +2,7 @@ setup:
 	@docker build . -t mermerd
 
 run:
-	@touch result.mmd
+	@touch mermerd.yaml result.mmd
 	@docker run --rm -it --net host \
     	--mount type=bind,source="${CURDIR}"/mermerd.yaml,target=/root/.mermerd \
 		--mount type=bind,source="${CURDIR}"/result.mmd,target=/root/result.mmd \
