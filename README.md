@@ -15,10 +15,10 @@ Example: [mermerd.yaml](mermerd.yaml)
 touch mermerd.yaml
 ```
 
-**Create config and result files**
+**Create result file**
 
 ```shell
-touch mermerd.yaml result.mmd
+touch result.mmd
 ```
 
 **Start mermerd interactively**
