@@ -7,4 +7,5 @@ run:
     	--mount type=bind,source="${CURDIR}"/mermerd.yaml,target=/root/.mermerd \
 		--mount type=bind,source="${CURDIR}"/result.mmd,target=/root/result.mmd \
 		mermerd \
+		--runConfig "/root/.mermerd" \
 		--connectionString "mysql://root:@tcp(host.docker.internal:3306)/mysql"
