@@ -43,5 +43,7 @@ jobs:
           RENOVATE_AUTODISCOVER_FILTER: ${{ github.repository }}
           RENOVATE_AUTOMERGE: true
           RENOVATE_AUTOMERGE_STRATEGY: merge-commit
+          RENOVATE_PR_HOURLY_LIMIT: 0
           RENOVATE_REBASE_WHEN: behind-base-branch
           RENOVATE_USE_BASE_BRANCH_CONFIG: merge
+          LOG_LEVEL: debug
