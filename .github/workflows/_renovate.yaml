@@ -31,7 +31,8 @@ jobs:
           private_key: ${{ secrets.RENOVATE_APP_PEM }}
           repositories: ${{ toJSON(github.repository) }}
 
-      - if: inputs.RENOVATE_BRANCH_NAME
+      - name: Prepare Renovate env
+        if: inputs.RENOVATE_BRANCH_NAME
         run: echo "RENOVATE_BRANCH_NAME=${{ inputs.RENOVATE_BRANCH_NAME }}" >> $GITHUB_ENV
 
       - name: Renovate
@@ -42,8 +43,4 @@ jobs:
           RENOVATE_AUTODISCOVER: true
           RENOVATE_AUTODISCOVER_FILTER: ${{ github.repository }}
           RENOVATE_AUTOMERGE: true
-          RENOVATE_AUTOMERGE_STRATEGY: merge-commit
           RENOVATE_PR_HOURLY_LIMIT: 0
-          RENOVATE_REBASE_WHEN: behind-base-branch
-          RENOVATE_USE_BASE_BRANCH_CONFIG: merge
-          LOG_LEVEL: debug
