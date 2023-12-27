@@ -2,6 +2,7 @@ name: Build image and push to container registry
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -38,9 +39,9 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/arm64,linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ format('ghcr.io/{0}:{1}', github.repository, steps.tags.outputs.DIGEST) || '' }}
-            ${{ format('ghcr.io/{0}:{1}', github.repository, steps.tags.outputs.REF_NAME) || '' }}
-            ghcr.io/${{ github.repository }}:latest
+            ${{ format('ghcr.io/{0}:{1}', github.repository, steps.tags.outputs.DIGEST) }}
+            ${{ format('ghcr.io/{0}:{1}', github.repository, steps.tags.outputs.REF_NAME) }}
+            ${{ format('ghcr.io/{0}:{1}', github.repository, 'latest') }}

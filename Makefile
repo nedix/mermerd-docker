@@ -12,4 +12,4 @@ run:
 
 test:
 	@$(MAKE) setup
-	@$(CURDIR)/tests/feature/all.sh
+	@tests/e2e/index.sh

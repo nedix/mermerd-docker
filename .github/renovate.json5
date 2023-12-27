@@ -11,24 +11,19 @@
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG ALPINE_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
-      depNameTemplate: "golang",
-      versioningTemplate: "semver-coerced",
-      extractVersionTemplate: "^\\d+\\.\\d+-alpine(?<version>\\d+\\.\\d+)$"
+      depNameTemplate: "alpine",
     },
     {
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG GO_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
       depNameTemplate: "golang",
-      versioningTemplate: "semver-coerced",
-      extractVersionTemplate: "^(?<version>\\d+\\.\\d+)-alpine\\d+\\.\\d+$"
     },
     {
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG MERMERD_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "github-releases",
       depNameTemplate: "KarnerTh/mermerd",
-      versioningTemplate: "semver-coerced",
     },
   ],
 }

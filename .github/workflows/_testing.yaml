@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  feature:
+  integration:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,4 +21,4 @@ jobs:
         shell: bash
         run: |
           docker build . -t mermerd
-          ./tests/feature/all.sh
+          ./tests/e2e/index.sh

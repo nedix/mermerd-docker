@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       RENOVATE_BRANCH_NAME:
-        description: "Branch name passed to Renovate"
+        description: Branch name passed to Renovate
         type: string
         required: false
 
