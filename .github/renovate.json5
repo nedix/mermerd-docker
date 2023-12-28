@@ -26,4 +26,11 @@
       depNameTemplate: "KarnerTh/mermerd",
     },
   ],
+  packageRules: [
+    {
+      description: "Disable grouping for regex managed dependencies",
+      matchDepTypes: ["regex"],
+      groupName: null
+    }
+  ],
 }
