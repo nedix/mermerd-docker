@@ -4,33 +4,37 @@
     "/^release\\/.*/",
   ],
   enabledManagers: [
-    "regex",
+    "custom.regex",
+    "github-actions",
   ],
-  regexManagers: [
+  customManagers: [
     {
+      depNameTemplate: "Alpine",
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG ALPINE_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
-      depNameTemplate: "alpine",
+      packageNameTemplate: "alpine",
     },
     {
+      depNameTemplate: "Go",
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG GO_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "docker",
-      depNameTemplate: "golang",
+      packageNameTemplate: "golang",
     },
     {
+      depNameTemplate: "Mermerd",
       fileMatch: ["^Dockerfile$"],
       matchStrings: ["ARG MERMERD_VERSION=(?<currentValue>.*?)\\n"],
       datasourceTemplate: "github-releases",
-      depNameTemplate: "KarnerTh/mermerd",
+      packageNameTemplate: "KarnerTh/mermerd",
     },
   ],
   packageRules: [
     {
-      description: "Disable grouping for regex managed dependencies",
-      matchDepTypes: ["regex"],
-      groupName: null
-    }
+      description: "Disable grouping for all dependencies",
+      matchPackagePatterns: [".*"],
+      groupName: null,
+    },
   ],
 }
