@@ -12,7 +12,7 @@ touch output.mmd
 
 #### (Optional) Create a [mermerd configuration] file
 
-See [examples/mermerd-config.yaml](https://github.com/nedix/mermerd-docker/blob/main/examples/mermerd-config.yaml)
+See [examples/mermerd-config.yaml](https://github.com/nedix/mermerd-container/blob/main/examples/mermerd-config.yaml)
 
 ## Usage
 
@@ -26,7 +26,7 @@ docker run --pull always --rm -it --name mermerd \
     --net host \
     --mount type=bind,source="${PWD}"/output.mmd,target=/root/result.mmd \
     --mount type=bind,source="${PWD}"/mermerd-config.yaml,target=/root/.mermerd \ # optional
-    ghcr.io/nedix/mermerd-docker \
+    ghcr.io/nedix/mermerd-container \
     --connectionString "mysql://root:@tcp(host.docker.internal:3306)/mysql"
 ```
 
