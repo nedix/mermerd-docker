@@ -1,4 +1,4 @@
-# [mermerd]-docker
+# [mermerd]-container
 
 Create [Mermaid] ERD diagrams from database schemas.
 
