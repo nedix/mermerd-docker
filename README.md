@@ -1,4 +1,4 @@
-# [mermerd]-container
+# [mermerd-container](https://github.com/nedix/mermerd-container)
 
 Create [Mermaid] ERD diagrams from database schemas.
 
