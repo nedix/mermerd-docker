@@ -1,6 +1,6 @@
 # [mermerd-container](https://github.com/nedix/mermerd-container)
 
-Create [Mermaid] ERD diagrams from database schemas.
+Create [Mermaid] ERD diagrams from live databases.
 
 ## Setup
 
