@@ -26,7 +26,7 @@ docker run --pull always --rm -it --name mermerd \
     --net host \
     --mount type=bind,source="${PWD}"/output.mmd,target=/root/result.mmd \
     --mount type=bind,source="${PWD}"/mermerd-config.yaml,target=/root/.mermerd \ # optional
-    ghcr.io/nedix/mermerd-container \
+    nedix/mermerd \
     --connectionString "mysql://root:@tcp(host.docker.internal:3306)/mysql"
 ```
 
