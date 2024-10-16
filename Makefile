@@ -1,5 +1,5 @@
 setup:
-	@docker build . -t mermerd
+	@docker build -f Containerfile -t mermerd .
 
 run:
 	@touch output.mmd
