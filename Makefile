@@ -12,4 +12,4 @@ run:
 
 test:
 	@$(MAKE) setup
-	@tests/e2e/index.sh
+	@tests/index.sh
