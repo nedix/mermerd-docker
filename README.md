@@ -10,7 +10,7 @@ Create [Mermaid] ERD diagrams from live databases.
 touch output.mmd
 ```
 
-#### 2. (Optional) Create a mermerd configuration file
+#### 1. (Optional) Create a mermerd configuration file
 
 See 
 [documentation](https://github.com/KarnerTh/mermerd?tab=readme-ov-file#global-configuration-file)
