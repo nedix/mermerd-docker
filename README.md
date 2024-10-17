@@ -10,7 +10,7 @@ Create [Mermaid] ERD diagrams from live databases.
 touch output.mmd
 ```
 
-#### 1. (Optional) Create a mermerd configuration file
+#### 2. (Optional) Create a mermerd configuration file
 
 See 
 [documentation](https://github.com/KarnerTh/mermerd?tab=readme-ov-file#global-configuration-file)
@@ -18,7 +18,7 @@ and
 [examples/mermerd-config.yaml](https://github.com/nedix/mermerd-container/blob/main/examples/mermerd-config.yaml)
 .
 
-#### 2. Run the mermerd command-line interface
+#### 3. Run the mermerd command-line interface
 
 This example command connects to a MySQL server running on localhost port 3306.
 Replace `root:` with your `username:password` combination.
